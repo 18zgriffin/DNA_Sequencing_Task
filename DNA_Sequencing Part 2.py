@@ -19,18 +19,19 @@ frag6 = open("fragment6.txt").read()
 fragarray = [frag1, frag2, frag3, frag4, frag5, frag6]
 sequarray = [sequence1, sequence2, sequence3, sequence4, sequence5]
 
+#creates a loop for every fragment, then inside that loop creates a loop for every sequence, it then searches every sequence for a fragment
+#and then prints where in the sequence that fragment is, then it loops back and does that for the next fragment
 for frag in fragarray:
+    print("Fragment Number", fragnumber)
     fragnumber += 1
-    sequnumber == 0
+    sequnumber = 0
     for sequence in sequarray:
         sequnumber += 1
         if frag in sequence:
             fragLoc = sequence.find(frag)
             fragLen = len(frag)
-            print("Fragment number", fragnumber, "is found in sequence", sequnumber, " from", fragLoc, "to", fragLen+fragLoc)
+            print("- Found in sequence", sequnumber, " from", fragLoc-1, "to", fragLen+fragLoc)
 
 #finds where in the frequence the fragment is first found
 
-#prints the location of the fragment
-print("The fragment is located from position", fragLoc, "to position", fragLen+fragLoc)
 
